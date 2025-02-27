@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vercelにデプロイ
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.TOKENID }}
+          vercel-org-id: ${{ secrets.ORGANIZATIONID }}
+          vercel-project-id: ${{ secrets.PROJECTID }}
+          working-directory: ./frontend
