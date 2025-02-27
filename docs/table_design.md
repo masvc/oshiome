@@ -2,11 +2,12 @@
 
 ## 1. ユーザーテーブル（Users）
 
-Supabase Auth で認証するユーザーの追加情報を保存するテーブルです。
+Supabase Auth で認証するユーザーの追加情報を保存するテーブルです。  
+id、name、email、createda_atはauth.usersと同一値をトリガで設定。
 
 | 項目名      | データ型                     | 桁数・備考             | 制約                     |
 |-------------|------------------------------|------------------------|--------------------------|
-| id          | UUID                         | 例: auto-generated     | PRIMARY KEY              |
+| id          | UUID                         | auth.usersのidを設定     | PRIMARY KEY              |
 | name        | VARCHAR(100)                 | 最大100文字            | NOT NULL                 |
 | email       | VARCHAR(255)                 | 最大255文字、ユニーク  | NOT NULL, UNIQUE         |
 | created_at  | TIMESTAMP WITH TIME ZONE     | デフォルト: now()      | DEFAULT now()            |
