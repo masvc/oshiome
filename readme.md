@@ -6,26 +6,36 @@
 
 ```
 oshiome/
-├── plan.md        # プロジェクト企画書
-└── readme.md      # 本ドキュメント
+├── frontend/           # フロントエンドアプリケーション
+│   ├── public/        # 静的ファイル
+│   ├── src/           # ソースコード
+│   ├── package.json   # 依存関係
+│   └── vite.config.ts # Vite設定
+├── docs/              # ドキュメント
+│   └── plan.md        # プロジェクト企画書
+├── list/              # アセット
+│   ├── *.png         # 画像ファイル
+│   └── list.md       # リスト
+├── icon.png           # プロジェクトアイコン
+└── readme.md          # 本ドキュメント
 ```
 
-## 開発予定の技術スタック
+## 技術スタック
 
-- フロントエンド: React
-- バックエンド: Supabase
-- デプロイ: Vercel
+- フロントエンド
 
-## 次のステップ
+  - React + TypeScript
+  - Vite (ビルドツール)
+  - TailwindCSS (スタイリング)
 
-1. フロントエンドプロジェクトの作成
+- バックエンド
 
-   - create-react-app で React プロジェクトを作成
-   - 基本的なページ構成の実装
+  - Supabase
+    - PostgreSQL (データベース)
+    - Auth (認証)
+    - Storage (ファイルストレージ)
 
-2. Supabase プロジェクトのセットアップ
-   - プロジェクト作成
-   - 認証設定
-   - データベース設計
+- デプロイ
+  - Vercel (フロントエンド)
 
 詳細な計画は [plan.md](./docs/plan.md) を参照してください。
