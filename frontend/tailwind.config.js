@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'oshi-pink': '#ffb7dc',
-        'oshi-purple': '#a78eff',
+        'oshi-pink': 'var(--color-oshi-pink)',
+        'oshi-purple': 'var(--color-oshi-purple)',
         'oshi-indigo': '#4f46e5',
       },
       backgroundImage: {

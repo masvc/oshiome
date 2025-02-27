@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-oshi-pink: #fff6f9;
+  --color-oshi-purple: #6b46c1;
+}
+
+body {
+  @apply bg-gradient-to-b from-oshi-pink to-white min-h-screen;
+}
+
 @layer base {
   html {
     @apply h-full;
