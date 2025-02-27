@@ -28,4 +28,4 @@ oshiome/
    - 認証設定
    - データベース設計
 
-詳細な計画は [plan.md](./plan.md) を参照してください。
+詳細な計画は [plan.md](./docs/plan.md) を参照してください。
