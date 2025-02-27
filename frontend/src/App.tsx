@@ -7,13 +7,13 @@ function App() {
         {/* ヘッダー */}
         <header className="bg-white shadow-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-oshi-purple">
+            <h1 className="text-3xl font-bold text-oshi-purple">
               <a href="/" className="flex items-center gap-2">
                 推しおめ
-                <span className="text-sm font-normal text-gray-500">WORLD</span>
+                <span className="text-sm font-normal text-gray-500">JAPAN</span>
               </a>
             </h1>
-            <button className="px-4 py-2 text-oshi-purple border border-oshi-purple rounded-full hover:bg-oshi-pink transition-colors">
+            <button className="px-6 py-3 text-oshi-purple border border-oshi-purple rounded-full hover:bg-oshi-pink transition-colors">
               企画を始める
             </button>
           </div>
@@ -50,24 +50,31 @@ function App() {
                   </section>
 
                   {/* 応援広告とは？セクション */}
-                  <section className="py-20" id="whats">
+                  <section className="py-24" id="whats">
                     <div className="max-w-7xl mx-auto px-4">
-                      <div className="text-center mb-12">
-                        <p className="text-oshi-purple font-medium mb-2">
+                      <div className="text-center mb-16">
+                        <p className="text-oshi-purple font-medium mb-2 text-lg">
                           WHAT IS BIRTHDAY ADS
                         </p>
-                        <h2 className="text-3xl font-bold text-gray-800">
+                        <h2 className="text-4xl font-bold text-gray-800">
                           応援広告とは？
                         </h2>
                       </div>
-                      <div className="max-w-3xl mx-auto">
-                        <p className="text-gray-600 leading-relaxed text-center">
-                          推しの誕生日を、ファンみんなでお祝いする新しい形。
-                          <br />
-                          駅や街頭ビジョンなどに広告を出して、
-                          <br />
-                          大切な推しの特別な日を盛り上げましょう！
-                        </p>
+                      <div className="flex justify-center items-center">
+                        <div className="max-w-3xl mx-auto">
+                          <p className="text-gray-700 leading-relaxed text-center text-lg">
+                            推しの誕生日を、ファンみんなでお祝いする新しい形。
+                            <br />
+                            駅や街頭ビジョンなどに広告を出して、
+                            <br />
+                            大切な推しの特別な日を盛り上げましょう！
+                          </p>
+                        </div>
+                        <img
+                          src="src/assets/img/sample.jpg"
+                          alt="サンプル画像"
+                          className="ml-4 w-1/3 rounded-lg shadow-md"
+                        />
                       </div>
                     </div>
                   </section>
