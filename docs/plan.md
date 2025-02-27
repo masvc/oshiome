@@ -160,17 +160,20 @@ oshiome/
     - Supabase の URL や API キーを安全に保管します
     - パスワードのような重要な情報を管理する場所です
 
-- [　] Docker 環境（全員が同じ開発環境を使えるようにする）
+- [✔︎] Docker 環境（全員が同じ開発環境を使えるようにする）
 
-  - [　] Dockerfile 作成
+  - [✔︎] Dockerfile 作成
     - アプリケーションを動かすための設定ファイルです
     - Node.js のバージョンなどを指定します
-  - [　] docker-compose.yml 作成
+  - [✔︎] docker-compose.yml 作成
     - 開発環境の全体設定ファイルです
     - ポート番号やファイルの場所などを指定します
-  - [　] .dockerignore の設定
+  - [✔︎] .dockerignore の設定
     - Docker に含めない不要なファイルを指定します
     - node_modules など、自動生成されるファイルは除外します
+
+  開発の際は `docker compose up` で開発サーバーを起動します。
+  本番用ビルドが必要な時は `docker compose run --rm frontend npm run build` を実行します
 
 - [ ] CI/CD（自動チェックと自動デプロイの設定）
   - [ ] GitHub Actions の設定
