@@ -37,5 +37,6 @@ oshiome/
 
 - デプロイ
   - Vercel (フロントエンド)
+    - https://oshiome.vercel.app/
 
 詳細な計画は [plan.md](./docs/plan.md) を参照してください。
