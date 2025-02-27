@@ -6,9 +6,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gradient-oshi">
-      <div className="max-w-7xl mx-auto p-8 text-center">
-        <div className="flex justify-center gap-8">
+    <div className="min-h-screen w-full bg-gradient-oshi">
+      <div className="max-w-7xl mx-auto p-8 text-center flex flex-col items-center justify-center min-h-screen">
+        <div className="flex justify-center gap-8 mb-8">
           <a
             href="https://vitejs.dev"
             target="_blank"
@@ -23,17 +23,17 @@ function App() {
           >
             <img
               src={reactLogo}
-              className="h-24 p-6 animate-[spin_20s_linear_infinite]"
+              className="h-24 p-6 animate-spin-slow"
               alt="React logo"
             />
           </a>
         </div>
 
-        <h1 className="text-4xl font-bold text-oshi-indigo mt-8 mb-12">
+        <h1 className="text-4xl font-bold text-oshi-indigo mb-12">
           推しおめ！
         </h1>
 
-        <div className="bg-white/80 p-8 rounded-3xl border-2 border-oshi-pink shadow-lg shadow-oshi-pink/20 transition-transform hover:-translate-y-1">
+        <div className="bg-white/80 p-8 rounded-3xl border-2 border-oshi-pink shadow-lg shadow-oshi-pink/20 transition-transform hover:-translate-y-1 mb-8">
           <button
             onClick={() => setCount((count) => count + 1)}
             className="px-4 py-2 bg-white rounded-lg border border-oshi-purple/30 hover:border-oshi-purple transition-colors"

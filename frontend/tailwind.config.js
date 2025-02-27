@@ -11,6 +11,12 @@ export default {
       backgroundImage: {
         'gradient-oshi': 'linear-gradient(135deg, #fff6f9 0%, #ffe6f6 100%)',
       },
+      fontFamily: {
+        sans: ['system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
     },
   },
   plugins: [],
