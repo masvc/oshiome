@@ -1,9 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './pages/Signup';
+import Signin from './pages/Signin';
 
 function App() {
   return (
-    <Router>
+    <Router future={{
+      v7_relativeSplatPath: true,
+      v7_startTransition: true
+    }}>
       <div className="min-h-screen">
         {/* ヘッダー */}
         <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -181,6 +185,7 @@ function App() {
               }
             />
             <Route path='/signup' element={<Signup />} />
+            <Route path='/signin' element={<Signin />} />
           </Routes>
         </main>
 
