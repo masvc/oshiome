@@ -193,9 +193,15 @@ oshiome/
       - main ブランチの更新で自動デプロイ
       - 手動での作業ミスを防げます
     - [✔︎] デプロイ時の注意点
-      - vercel.json の配置場所はルートディレクトリ
-      - VERCEL_TOKEN、VERCEL_ORG_ID、VERCEL_PROJECT_ID の設定が必要
-      - フロントエンドのビルドコマンドは`npm --prefix frontend`を使用
+      - Vercel の設定は極力ダッシュボードで管理（設定の一元化）
+      - Root Directory は`frontend`を指定
+      - GitHub Secrets に必要な環境変数を設定
+        - `VERCEL_TOKEN`：Vercel の認証トークン
+        - `VERCEL_ORG_ID`：組織 ID
+        - `VERCEL_PROJECT_ID`：プロジェクト ID
+      - GitHub Actions のワークフローでは Vercel の設定と競合しないよう注意
+        - `working-directory`の指定はビルド時のみに限定
+        - デプロイ時の設定は Vercel ダッシュボードに委ねる
       - 日本語のコミットメッセージに対応するための Git 設定が必要
 
 ### フェーズ 2：最小限の機能実装（MVP）
