@@ -12,15 +12,13 @@ function Signin() {
         try {
             const user = await authRepository.signin(email, password)
             setCurrentUser(user)
-            // console.log('signin Success：', user)
+            console.log('signin Success：', user)
         } catch (error) {
             console.error('signin Error：', error)
         }
     }
 
-    if (currentUser != null) {
-        return <Navigate replace to="/" />
-    }
+    if (currentUser != null) return <Navigate replace to={"/"} />
 
     return (
         <div className="bg-gray-100 py-5 px-4">

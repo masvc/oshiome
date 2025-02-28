@@ -1,8 +1,12 @@
 import { createContext, useEffect, useState } from "react"
 import { authRepository } from "./repositories/auth"
 
+type SessionProviderProps = {
+    children: React.ReactNode
+}
+
 const SessionContext = createContext([null, () => { }])
-const SessionProvider = ({ children }) => {
+const SessionProvider = ({ children }: SessionProviderProps) => {
     const [currentUser, setCurrentUser] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
 

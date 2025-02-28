@@ -19,7 +19,7 @@ function Signup() {
         }
     }
 
-    if (currentUser != null) return <Navigate replace to="/" />;
+    if (currentUser != null) return <Navigate replace to={"/"} />;
 
     return (
         <div className="bg-gray-100 py-5 px-4">
