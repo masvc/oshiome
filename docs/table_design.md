@@ -1,9 +1,9 @@
 # テーブル設計
 
-## 1. ユーザーテーブル（Users）
+## 1. ユーザーテーブル（profiles）
 
 Supabase Auth で認証するユーザーの追加情報を保存するテーブルです。  
-id、name、email、createda_atはauth.usersと同一値をトリガで設定。
+id、name、email、created_atはauth.usersと同一値をトリガで設定。
 
 | 項目名      | データ型                     | 桁数・備考             | 制約                     |
 |-------------|------------------------------|------------------------|--------------------------|
@@ -13,7 +13,7 @@ id、name、email、createda_atはauth.usersと同一値をトリガで設定。
 | created_at  | TIMESTAMP WITH TIME ZONE     | デフォルト: now()      | DEFAULT now()            |
 | updated_at  | TIMESTAMP WITH TIME ZONE     | デフォルト: now()      | DEFAULT now()            |
 
-## 2. 企画テーブル（Campaigns）
+## 2. 企画テーブル（campaigns）
 
 企画者が作成する誕生日企画の情報を管理します。
 
@@ -30,7 +30,7 @@ id、name、email、createda_atはauth.usersと同一値をトリガで設定。
 | created_at  | TIMESTAMP WITH TIME ZONE     | デフォルト: now()      | DEFAULT now()            |
 | updated_at  | TIMESTAMP WITH TIME ZONE     | デフォルト: now()      | DEFAULT now()            |
 
-## 3. 支援テーブル（Contributions）
+## 3. 支援テーブル（contributions）
 
 どのユーザーがどの企画に対して、いくら支援したかを記録します。
 
@@ -43,7 +43,7 @@ id、name、email、createda_atはauth.usersと同一値をトリガで設定。
 | payment_status  | VARCHAR(50)                  | 例: “pending”, “succeeded”, “failed” | NOT NULL |
 | created_at      | TIMESTAMP WITH TIME ZONE     | デフォルト: now()      | DEFAULT now()            |
 
-## 4. 決済テーブル（Payments）
+## 4. 決済テーブル（payments）
 
 Stripe（またはテスト用決済）の決済情報を個別に記録します。
 
