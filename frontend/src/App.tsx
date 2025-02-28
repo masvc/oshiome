@@ -4,10 +4,12 @@ import Signin from './pages/Signin';
 
 function App() {
   return (
-    <Router future={{
-      v7_relativeSplatPath: true,
-      v7_startTransition: true
-    }}>
+    <Router
+      future={{
+        v7_relativeSplatPath: true,
+        v7_startTransition: true,
+      }}
+    >
       <div className="min-h-screen">
         {/* ヘッダー */}
         <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -184,8 +186,8 @@ function App() {
                 </div>
               }
             />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/signin' element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/signin" element={<Signin />} />
           </Routes>
         </main>
 
