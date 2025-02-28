@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'oshi-pink': 'var(--color-oshi-pink)',
-        'oshi-purple': 'var(--color-oshi-purple)',
+        'oshi-pink': '#FF69B4',
+        'oshi-purple': '#9B6B9E',
         'oshi-indigo': '#4f46e5',
       },
       backgroundImage: {
@@ -19,5 +19,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+  ],
 };
