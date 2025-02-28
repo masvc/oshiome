@@ -195,14 +195,22 @@ oshiome/
     - [✔︎] デプロイ時の注意点
       - Vercel の設定は極力ダッシュボードで管理（設定の一元化）
       - Root Directory は`frontend`を指定
-      - GitHub Secrets に必要な環境変数を設定
-        - `VERCEL_TOKEN`：Vercel の認証トークン
-        - `VERCEL_ORG_ID`：組織 ID
-        - `VERCEL_PROJECT_ID`：プロジェクト ID
+      - 環境変数の設定は 2 種類
+        1. GitHub Actions 用の環境変数（GitHub Secrets に設定）
+           - `VERCEL_TOKEN`：Vercel の認証トークン
+           - `VERCEL_ORG_ID`：組織 ID
+           - `VERCEL_PROJECT_ID`：プロジェクト ID
+        2. アプリケーション用の環境変数（Vercel ダッシュボードに設定）
+           - `VITE_SUPABASE_URL`：Supabase のプロジェクトのデータベース接続 URL
+           - `VITE_SUPABASE_ANON_KEY`：Supabase の公開認証キー
+             ※ 設定忘れると白い画面になるので要注意！
       - GitHub Actions のワークフローでは Vercel の設定と競合しないよう注意
         - `working-directory`の指定はビルド時のみに限定
         - デプロイ時の設定は Vercel ダッシュボードに委ねる
       - 日本語のコミットメッセージに対応するための Git 設定が必要
+      - トラブルシューティング
+        - 白い画面が表示される場合は環境変数の設定を確認
+        - デプロイ後は必ず Vercel ダッシュボードでビルドログを確認
 
 ### フェーズ 2：最小限の機能実装（MVP）
 
